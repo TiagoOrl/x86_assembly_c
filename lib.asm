@@ -47,7 +47,7 @@ sumValues:
     pop ebp
     ret
 
-; returning structures
+; 3: returning structures
 getStruct:
     push ebp
     mov ebp, esp
@@ -56,6 +56,8 @@ getStruct:
     mov byte[eax], 'H' ; sets first index of array buf
     mov byte[eax + 1], 'e' ; sets second
     mov byte[eax + 2], 'l' ; sets third
+    mov byte[eax + 3], 'l'
+    mov byte[eax + 4], 'o'
 
     pop ebp
     ret
