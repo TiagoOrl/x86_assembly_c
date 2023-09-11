@@ -2,7 +2,8 @@
 global myAsm
 global localVars
 global sumValues
-global getStruct
+global createStruct
+global readStruct
 
 section .text
 
@@ -48,7 +49,7 @@ sumValues:
     ret
 
 ; 3: returning structures
-getStruct:
+createStruct:
     push ebp
     mov ebp, esp
 
@@ -62,3 +63,13 @@ getStruct:
     pop ebp
     ret
 
+; 4: pass struct to asm function
+
+readStruct:
+    push ebp
+    mov ebp, esp
+
+    mov eax, [esp + 8] ; pos of buf[0]
+
+    pop ebp
+    ret
