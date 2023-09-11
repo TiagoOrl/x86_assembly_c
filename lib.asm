@@ -69,7 +69,7 @@ readStruct:
     push ebp
     mov ebp, esp
 
-    mov eax, [esp + 8] ; pos of buf[0]
+    mov eax, [esp + 10] ; pos of buf[i]
 
     pop ebp
     ret
