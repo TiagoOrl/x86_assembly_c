@@ -4,6 +4,9 @@ global localVars
 global sumValues
 global createStruct
 global readStruct
+global keyInput
+
+extern getchar
 
 section .text
 
@@ -70,6 +73,16 @@ readStruct:
     mov ebp, esp
 
     mov eax, [esp + 10] ; pos of buf[i]
+
+    pop ebp
+    ret
+
+
+keyInput:
+    push ebp
+    mov ebp, esp
+
+    call getchar
 
     pop ebp
     ret

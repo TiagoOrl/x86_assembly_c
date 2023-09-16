@@ -13,6 +13,7 @@ extern int localVars();
 extern int sumValues(int a, int b);
 extern test createStruct();
 extern int readStruct(test t);
+extern char keyInput();
 
 
 int main(int argc, char const *argv[])
@@ -21,16 +22,19 @@ int main(int argc, char const *argv[])
     // printf("val is %d\n", r);
     // printf("sum of vars is: %d\n", sumValues(10, 5000));
 
-    test t = createStruct();
-    test t1;
-    t1.buf[0] = 'A';
-    t1.buf[1] = 'Z';
-    t1.buf[2] = '-';
-    t1.buf[3] = '5';
+    // test t = createStruct();
+    // test t1;
+    // t1.buf[0] = 'A';
+    // t1.buf[1] = 'Z';
+    // t1.buf[2] = '-';
+    // t1.buf[3] = '5';
 
-    // printf("%c%c%c\n", t.buf[0],t.buf[1], t.buf[2]);
+    // // printf("%c%c%c\n", t.buf[0],t.buf[1], t.buf[2]);
 
-    printf("%c\n", (char)readStruct(t1));
+    // printf("%c\n", (char)readStruct(t1));
+
+    char c = keyInput();
+    printf("keyboard: %c\n", c);
 
     return 0;
 }
